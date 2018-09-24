@@ -45,9 +45,17 @@ body {
           .sp_navi_li {
             display: inline-block;
             display: none;
+            border:1px solid #e8e4da;
             li {
               list-style: none;
-              text-decoration: none;
+              border:1px solid #e8e4da;
+              border-collapse: collapse;
+              margin:0;
+              padding:5px 10px;
+              a {
+                text-decoration: none;
+                color:$brown;
+              }
             }
           }
 
@@ -84,12 +92,14 @@ body {
         li {
           list-style: none;
           float: left;
-          padding-left: 10px;
+          padding-left: 17px;
           margin-bottom: 0;
           a {
             font-weight: bold;
             color: $brown;
             text-decoration: none;
+            letter-spacing: 1px;
+            font-size: 14px;
           }
         }
       }
@@ -240,7 +250,7 @@ body {
       @media (max-width: 550px) {
         .guide_box {
           background-color: $white;
-          padding: 15px;
+          padding: 20px;
           border: 2px solid $backgroundwhite;
           width: 100%;
           box-sizing: border-box;
@@ -268,6 +278,7 @@ body {
             width: 100%;
             max-width: 150px;
             padding-bottom: 10px;
+            margin-bottom: 0;
           }
           .banner2 {
             width: 100%;
@@ -279,7 +290,7 @@ body {
         display: flex;
         .guide_box {
           background-color: $white;
-          padding: 10px;
+          padding: 20px;
           border: 1px solid $backgroundwhite;
           box-sizing: border-box;
           width: 50%;
@@ -288,14 +299,20 @@ body {
             font-size: 1.5rem;
             color: $brown;
             font-weight: bold;
+            margin: 0;
+            padding-bottom: 10px;
           }
           h3 {
             font-size: 1rem;
             color: $brown;
             font-weight: bold;
+            margin: 0;
+            padding-bottom: 5px;
           }
           p {
             font-size: 1rem;
+            margin: 0;
+            padding-bottom: 5px;
           }
           .banner1 {
             width: 100%;
@@ -310,7 +327,7 @@ body {
     #search {
       @media (max-width: 550px) {
         margin-top:20px;
-        padding: 20px 15px;
+        padding: 30px 25px;
         background-color: $white;
         .button-primary {
           width: 100%;
@@ -319,33 +336,41 @@ body {
         }
         #searchInput {
           margin-bottom: 0;
-          background-color: darken($backgroundwhite, 3%);
+          background-color: #eeeeee;
+          color: #bcbcbc;
           border-radius: 0;
           border: none;
           background-image: url("../images/top/search_icon.png");
           background-repeat: no-repeat;
           background-position: right 5% bottom 50%;
+          font-style: italic;
         }
         .itemsearch {
           display: none;
         }
       }
       @media (min-width: 550px) {
-        padding: 20px 15px;
+        padding: 20px 20px 25px;
         background-color: $white;
         .button-primary {
           width: 100%;
-          padding: 5px;
+          padding: 10px 0;
           background-color: $backgroundwhite;
         }
         #searchInput {
           margin-bottom: -1.5rem;
-          background-color: darken($backgroundwhite, 3%);
+          background-color: #eeeeee;
+          color: #bcbcbc;
           border-radius: 0;
           border: none;
           background-image: url("../images/top/search_icon.png");
           background-repeat: no-repeat;
           background-position: right 5% bottom 50%;
+          font-style: italic;
+
+        }
+        .itemsearch {
+          padding: 5px 0;
         }
       }
     }
@@ -356,7 +381,7 @@ body {
       color: $white;
       font-size: 1.3rem;
       font-weight: bold;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
       text-align: left;
       padding: 15px 5px;
       margin-top: 5px;
@@ -375,7 +400,7 @@ body {
       color: $white;
       font-size: 1.3rem;
       font-weight: bold;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
       text-align: left;
       padding: 15px 5px;
       margin-top: 5px;
@@ -426,7 +451,7 @@ body {
       @media (max-width: 550px) {
         background-color: $white;
         .box_detail_left {
-          padding: 10px;
+          padding: 15px 15px;
           box-sizing: border-box;
           width: 49%;
           display: inline-block;
@@ -436,22 +461,20 @@ body {
           }
         }
         .box_detail_right {
-          padding: 5px;
+          padding: 10px 0;
           box-sizing: border-box;
           width: 49%;
           display: inline-block;
           p {
-            font-size: 1.2rem;
+            font-size: 1.7rem;
             padding: 5px 0;
             margin: 0;
             display: inline-block;
           }
           a {
             .link_detail {
-              background-color: $brown;
-              padding: 5px 10px;
-              border-radius: 15px;
               display: inline-block;
+
             }
           }
         }
@@ -465,7 +488,7 @@ body {
           width: 100%;
         }
         .box_detail_right {
-          padding: 10px 0;
+          padding: 5px 0;
           p {
             font-size: 0.5rem;
             padding: 5px 0;
@@ -473,10 +496,6 @@ body {
           }
           a {
             .link_detail {
-              background-color: $brown;
-              padding: 5px 10px;
-              border-radius: 15px;
-              width: 70%;
               margin: 0 auto;
               display: block;
             }
@@ -690,7 +709,7 @@ body {
                 display: block;
                 width: 20%;
                 height: 20%;
-                margin:0;
+                margin: 0;
                 img {
                   display: block;
                   border: 2px solid white;
@@ -851,7 +870,7 @@ body {
             border-top: 1px solid #e8e4da;
             padding: 20px 0;
             display: -webkit-flex;
-              display: flex;
+            display: flex;
             #display_img {
               width: 71%;
               border: 2px solid white;
@@ -874,7 +893,7 @@ body {
                 display: block;
                 width: 50%;
                 height: 20%;
-                margin:0;
+                margin: 0;
                 img {
                   display: block;
                   border: 2px solid white;
